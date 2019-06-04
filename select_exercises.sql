@@ -1,27 +1,21 @@
 USE codeup_test_db;
 
 #Albums by Pink Floyd
-SELECT 'By Pink Floyd' AS 'Albums';
-SELECT name from albums where artist = 'Pink Floyd';
+SELECT name AS 'Albums by Pink Floyd' from albums where artist = 'Pink Floyd';
 
 #Release date of requested album
-SELECT 'Of Sgt. Pepper''s Lonely Hearts Club' AS 'Release Year';
-SELECT release_date from albums where name = 'Sgt. Pepper''s Lonely Hearts Club Band';
+SELECT release_date AS 'Release year of Sgt. Pepper''s Lonely Hearts Club' from albums where name = 'Sgt. Pepper''s Lonely Hearts Club Band';
 
 #Genre of Nevermind
-SELECT 'Of Nevermind' AS 'Genre';
-SELECT genre from albums where name = 'Nevermind';
+SELECT genre AS 'Genre of Nevermind' from albums where name = 'Nevermind';
 
 #Albums made in the 90s
-SELECT 'made in 1990''s' AS 'Albums';
-SELECT name from albums where release_date BETWEEN 1990 AND 2000;
+SELECT name AS 'Albums made in the 1990''s' from albums where release_date BETWEEN 1990 AND 1999;
 
 #Albums that sold less than 20 mil copies
-SELECT 'that sold less than 20mil copies' AS 'Albums';
-SELECT name from albums where sales < 20;
+SELECT name AS 'Albums that sold less than 20mil copies' from albums where sales < 20;
 
 #Albums with genre of 'Rock'
-SELECT 'with genre of ''Rock''' AS 'Albums';
-SELECT name from albums where genre = 'Rock';
+SELECT name AS 'Albums with the genre of ''Rock''' from albums where genre = 'Rock';
 
 
