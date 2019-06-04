@@ -8,7 +8,7 @@ SET sales = sales*10;
 #shows albums released before 1980
 SELECT * from albums WHERE release_date < 1980;
 UPDATE albums
-SET release_date = 1800
+SET release_date = release_date - 100
 WHERE release_date < 1980;
 
 #shows albums by Michael Jackson
