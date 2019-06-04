@@ -36,5 +36,5 @@ values
 ('Nirvana', 'Nevermind', 1991, 16.7, 'Grunge, alternative rock'),
 ('Pink Floyd', 'The Wall', 1979, 18.7, 'Progressive rock'),
 ('Santana', 'Supernatural', 1999, 20.5, 'Latin rock'),
-('Guns N'' Roses', 'Appetite for Destruction', 1987, 21.6, 'Hard rock'),
+('Guns N'' Roses', 'Appetite for Destruction', 1987, 21.6, 'Hard rock');
 
