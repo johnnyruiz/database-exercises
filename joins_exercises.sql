@@ -5,6 +5,7 @@ USE employees;
 
 
 SELECT depart.dept_name Department_Name, CONCAT(em.first_name,', ',em.last_name) Department_Manager
+#this will show the start date and current date for the manager-->, dm.from_date Started_On, CURRENT_DATE todays_date
 #Sets the alias of the employees table to em
 FROM employees em
 #Sets the dept_manager alias to dm
@@ -14,11 +15,13 @@ JOIN dept_manager dm ON dm.emp_no = em.emp_no
 #Joins departments and dept_manager table by the key/foreign dept_no.
 JOIN departments depart ON depart.dept_no = dm.dept_no
 #WHERE clause  checks to make sure the manager is current.
-WHERE CURRENT_DATE BETWEEN from_date AND to_date ORDER BY Department_Name;
+WHERE CURRENT_DATE BETWEEN from_date AND to_date 
+#Orders the department name alphabetically
+ORDER BY Department_Name;
 
 #3.Find the name of all departments currently managed by women.
 
-SELECT depart.dept_name Department_Name, CONCAT(em.first_name,', ',em.last_name) Department_Manager
+SELECT depart.dept_name Department_Name, CONCAT(em.first_name, ' ', em.last_name) Department_Manager
 FROM employees em
 JOIN dept_manager dm ON dm.emp_no = em.emp_no
 JOIN departments depart ON depart.dept_no = dm.dept_no
@@ -51,3 +54,4 @@ AND CURRENT_DATE BETWEEN sal.from_date AND sal.to_date
 ORDER BY Department_Name;
 
 #Bonus. Find the names of all current employees, their department name, and their current manager's name.
+
